@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seesh Cozy Coffee Corner</title>
+    <link rel="stylesheet" href="coffee_shop.css">
+</head>
+<body>
+    <header>
+        <h1>Seesh Cozy Coffee Corner</h1>
+        <nav>
+            <ul>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#order">Order</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#registration">Register</a></li>
+                <li><a href="#login">Login</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Menu Section -->
+    <section id="menu">
+        <h2>Our Menu</h2>
+        <div class="menu-item">
+            <h3>Espresso</h3>
+            <p>Rich and bold espresso shot - R25</p>
+        </div>
+        <div class="menu-item">
+            <h3>Cappuccino</h3>
+            <p>Espresso with steamed milk and foam - R30</p>
+        </div>
+        <div class="menu-item">
+            <h3>Hot Chocolate</h3>
+            <p>Hot and rich creamy with steamed and milk foam - R30</p>
+        </div>
+        <div class="menu-item">
+            <h3>Original Black Coffee</h3>
+            <p>Your choice of coffee in simple and plain - R25</p>
+        </div>
+        <div class="menu-item">
+            <h3>Pastries</h3>
+            <p>Freshly baked, ask for today’s special! - R45</p>
+        </div>
+    </section>
+
+    <!-- Order Section -->
+    <section id="order">
+        <h2>Order Your Favorite</h2>
+        <form id="orderForm">
+            <label for="menuItem">Choose an item:</label>
+            <select id="menuItem" name="menuItem">
+                <option value="coffee">Coffee</option>
+                <option value="sandwich">Sandwich</option>
+                <option value="pastry">Pastry</option>
+            </select>
+            <br><br>
+            
+            <div id="coffeeOptions" style="display:none;">
+                <label for="coffeeSize">Choose size:</label>
+                <select id="coffeeSize" name="coffeeSize">
+                    <option value="small">Small - R25</option>
+                    <option value="medium">Medium - R30</option>
+                    <option value="large">Large - R35</option>
+                </select>
+                <br><br>
+                <label for="extraShot">Extra espresso shot? (+R5)</label>
+                <input type="checkbox" id="extraShot" name="extraShot"><br><br>
+            </div>
+
+            <div id="sandwichOptions" style="display:none;">
+                <label for="filling">Choose filling:</label>
+                <select id="filling" name="filling">
+                    <option value="veg">Veg - R45</option>
+                    <option value="chicken">Chicken - R55</option>
+                    <option value="beef">Beef - R65</option>
+                </select>
+                <br><br>
+                <label for="meal">Make it a meal?</label>
+                <input type="checkbox" id="meal" name="meal"><br><br>
+            </div>
+
+            <div id="pastryOptions" style="display:none;">
+                <label for="pastryType">Choose type:</label>
+                <select id="pastryType" name="pastryType">
+                    <option value="regular">Regular - R40</option>
+                    <option value="sugarless">Sugarless - R45</option>
+                    <option value="eggless">Eggless - R45</option>
+                </select>
+                <br><br>
+            </div>
+
+            <button type="submit">Place Order</button>
+        </form>
+        <p id="orderSummary"></p>
+    </section>
+    
+    <!-- About Us Section -->
+    <section id="about">
+        <h2>About Us</h2>
+        <p>Welcome to Seesh Cozy Coffee Corner ☕✨
+            Once upon a coffee bean, in a tiny but mighty corner of town, a dream was brewed—literally. We’re not just another coffee shop; we’re your second home, your caffeine haven, and your excuse to be "busy" while sipping the finest cup of joy.
+            
+            At Seesh Cozy Coffee Corner, we believe in three things:<br><br>
+            ✅ Coffee that hugs your soul ☕<br>
+            ✅ Pastries that make your taste buds dance 🥐<br>
+            ✅ A cozy spot where WiFi is strong, but the aroma of fresh coffee is stronger 😍<br><br>
+            
+            So whether you need a morning pick-me-up, a midday escape, or a late-night caffeine boost, we’ve got you covered. Pull up a chair, sip, laugh, and stay as long as you like—just don’t blame us if you never want to leave!
+            
+            P.S. <br>Our baristas are trained professionals in making the perfect cup… and in pretending not to judge your five-coffee-a-day habit. 😉.</p>
+    </section>
+    
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: info@cozycoffeecorner.com</p>
+        <p>Phone: +27 726 78900</p>
+        <p>Address: 16 Mandas Street, Montana, Cape Town</p>
+    </section>
+
+    <!-- Registration Section -->
+    <section id="registration" style="display:none;">
+        <h2>User Registration</h2>
+        <form action="register.php" method="POST">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" required><br><br>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required><br><br>
+            
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required><br><br>
+            
+            <button type="submit">Register</button>
+        </form>
+        <p>Already have an account? <a href="javascript:void(0);" onclick="showSection('login')">Login here</a></p>
+    </section>
+
+    <!-- Login Section -->
+    <section id="login" style="display:none;">
+        <h2>User Login</h2>
+        <form action="login.php" method="POST">
+            <label for="loginUsername">Username:</label>
+            <input type="text" id="loginUsername" name="username" required><br><br>
+            
+            <label for="loginPassword">Password:</label>
+            <input type="password" id="loginPassword" name="password" required><br><br>
+            
+            <button type="submit">Login</button>
+        </form>
+        <p>Don't have an account? <a href="javascript:void(0);" onclick="showSection('registration')">Register here</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Cozy Coffee Corner. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript to show/hide sections for ordering
+        document.getElementById("menuItem").addEventListener("change", function() {
+            const coffeeOptions = document.getElementById("coffeeOptions");
+            const sandwichOptions = document.getElementById("sandwichOptions");
+            const pastryOptions = document.getElementById("pastryOptions");
+
+            coffeeOptions.style.display = "none";
+            sandwichOptions.style.display = "none";
+            pastryOptions.style.display = "none";
+
+            if (this.value === "coffee") {
+                coffeeOptions.style.display = "block";
+            } else if (this.value === "sandwich") {
+                sandwichOptions.style.display = "block";
+            } else if (this.value === "pastry") {
+                pastryOptions.style.display = "block";
+            }
+        });
+
+        // JavaScript to handle order form submission
+        document.getElementById("orderForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form submission
+
+            const menuItem = document.getElementById("menuItem").value;
+            let price = 0;
+
+            if (menuItem === "coffee") {
+                const size = document.getElementById("coffeeSize").value;
+                price = size === "small" ? 25 : size === "medium" ? 30 : 35;
+
+                if (document.getElementById("extraShot").checked) {
+                    price += 5;
+                }
+            } else if (menuItem === "sandwich") {
+                const filling = document.getElementById("filling").value;
+                price = filling === "veg" ? 45 : filling === "chicken" ? 55 : 65;
+
+                if (document.getElementById("meal").checked) {
+                    // You can add drink options here if needed
+                }
+            } else if (menuItem === "pastry") {
+                const pastryType = document.getElementById("pastryType").value;
+                price = pastryType === "regular" ? 40 : 45;
+            }
+
+            document.getElementById("orderSummary").innerText = `Thank you for your order! Your total is: R${price}`;
+        });
+
+        // Function to show registration or login section
+        function showSection(section) {
+            document.getElementById('registration').style.display = 'none';
+            document.getElementById('login').style.display = 'none';
+            if (section === 'registration') {
+                document.getElementById('registration').style.display = 'block';
+            } else {
+                document.getElementById('login').style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>

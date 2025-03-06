@@ -1,0 +1,108 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #3e2723; /* Dark Brown */
+    color: #d7ccc8; /* Light Brown */
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    background-image: url('pic2.jpg'); /* Add your coffee image */
+    background-size: cover; /* Adjusted to cover */
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+header {
+    background-color: #5d4037; /* Medium Brown */
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+section {
+    padding: 50px;
+    text-align: center;
+    background-color: rgba(93, 63, 55, 0.8); /* Semi-transparent background for sections */
+    border-radius: 10px; /* Rounded corners for sections */
+    margin: 20px auto;
+    max-width: 800px; /* Max width for sections */
+}
+
+.menu-item {
+    background-color: #795548; /* Light Brown */
+    padding: 20px;
+    margin: 15px auto;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    color: white;
+}
+
+#order {
+    background-color: #8d6e63; /* Light Brown for order section */
+    border-radius: 10px;
+    padding: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label {
+    margin: 10px 0;
+    font-weight: bold;
+    color: white; /* Label color */
+}
+
+select {
+    padding: 10px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+button {
+    background-color: #d7ccc8; /* Light color for button */
+    color: #3e2723; /* Dark text for button */
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #c2b4a4; /* Darken button on hover */
+}
+
+footer {
+    background-color: #5d4037;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
